@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tasbih</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+
+   
+    <style>
+        * {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+
+        }
+
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to right, #AAC8A7, #C9DBB2, #E3F2C1);
+
+        }
+
+        h1 {
+            font-weight: 900;
+            padding: 30px 0;
+            color: #0B666A;
+            font-size: 2rem;
+        }
+
+        .card {
+
+            box-shadow: 4px 4px 4px gray;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            background-color: #F6FFDE;
+            padding: 50px 0;
+            width: 50%;
+            margin: 0 auto 50px;
+        }
+
+        h3 {
+            padding-bottom: 10px;
+            font-weight: 700;
+            color: #5B9A8B;
+
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 0;
+            margin: 5px;
+
+        }
+
+        .left-btn {
+            background-color: #AAC8A7;
+        }
+
+        .right-btn {
+            background-color: #E3F2C1;
+        }
+
+        p {
+            font-size: 2rem;
+            color: #0B666A;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Digital Tasbih</h1>
+    <p style="margin-bottom: 10px;">﷽</p>
+
+
+    <div class="card">
+        <div>
+            <h3>Subhanallah</h3>
+            <h3>سبحان الله</h3>
+            <p id="counter">0</p>
+            <button id="increase-btn" class="left-btn">Increase</button>
+            <button id="reset-btn" class="right-btn">Reset</button>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div>
+            <h3>Alhamdulillah</h3>
+            <h3>الحمد لله</h3>
+            <p id="counter1">0</p>
+            <button id="increase-btn1" class="left-btn">Increase</button>
+            <button id="reset-btn1" class="right-btn">Reset</button>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div>
+            <h3>Allahu Akbar</h3>
+            <h3>الله أكبر</h3>
+            <p id="counter2">0</p>
+            <button id="increase-btn2" class="left-btn">Increase</button>
+            <button id="reset-btn2" class="right-btn">Reset</button>
+        </div>
+    </div>
+
+    <script>
+
+        let counterValue = 0;
+        const countDown = document.getElementById('counter');
+
+        document.getElementById('increase-btn').addEventListener('click', function () {
+            counterValue++;
+            countDown.innerText = counterValue;
+        })
+
+        document.getElementById('reset-btn').addEventListener('click', function () {
+            counterValue = 0;
+            countDown.innerText = counterValue;
+        })
+
+        // 1
+
+        const countDown1 = document.getElementById('counter1');
+        document.getElementById('increase-btn1').addEventListener('click', function () {
+            counterValue++;
+            countDown1.innerText = counterValue;
+        })
+
+        document.getElementById('reset-btn1').addEventListener('click', function () {
+            counterValue = 0;
+            countDown1.innerText = counterValue;
+        })
+
+        // 2
+
+        const countDown2 = document.getElementById('counter2');
+        document.getElementById('increase-btn2').addEventListener('click', function () {
+            counterValue++;
+            countDown2.innerText = counterValue;
+        })
+
+        document.getElementById('reset-btn2').addEventListener('click', function () {
+            counterValue = 0;
+            countDown2.innerText = counterValue;
+        })
+
+    </script>
+
+
+</body>
+
+</html>
